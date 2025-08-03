@@ -35,11 +35,7 @@ title: 我的学习笔记
 
 ## 关于我
 
-我是一名热爱学习的开发者，热衷于探索新技术和分享知识。这个博客是我学习历程的记录，希望能对大家有所帮助。
-
-如果你有任何问题或建议，欢迎联系我！
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+杭电网安喵，主要学习方向是量自己计算
 
 ## Header 2
 

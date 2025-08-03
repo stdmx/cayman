@@ -74,3 +74,4 @@ learning_blog/
 ## 许可证
 
 本项目使用 [MIT](LICENSE) 许可证。
+https://stdmx.github.io/learning_blog/
