@@ -1,16 +1,43 @@
 ---
 layout: default
+title: 我的学习笔记
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# 我的学习笔记
 
-[Link to another page](./another-page.html).
+欢迎来到我的学习笔记博客！这里记录了我在学习过程中的知识点、心得体会和项目实践。
 
-There should be whitespace between paragraphs.
+## 最新笔记
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+<ul>
+  {% for post in site.posts limit: 5 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
+  {% endfor %}
+</ul>
 
-# Header 1
+## 学习分类
+
+{% assign categories = site.categories | sort %}
+{% for category in categories %}
+  <h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+## 关于我
+
+我是一名热爱学习的开发者，热衷于探索新技术和分享知识。这个博客是我学习历程的记录，希望能对大家有所帮助。
+
+如果你有任何问题或建议，欢迎联系我！
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 

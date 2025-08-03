@@ -1,5 +1,35 @@
-title: Cayman theme
-description: Cayman is a clean, responsive theme for GitHub Pages.
-show_downloads: true
+# 网站标题
+title: 我的学习笔记
+
+# 网站描述
+description: 记录学习过程中的知识点和心得体会
+
+# 作者信息
+author:
+  name: 你的名字
+  email: 你的邮箱
+  url: https://github.com/你的GitHub用户名
+
+# 仓库信息
+repository: 你的GitHub用户名/learning_blog
+
+# 显示下载按钮
+show_downloads: false
+
+# Google Analytics（可选）
 google_analytics:
+
+# 使用的主题
 theme: jekyll-theme-cayman
+
+# 插件
+gems:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# permalink格式
+permalink: /:year/:month/:day/:title/
+
+# 分页
+paginate: 5
+paginate_path: "/page/:num/"
