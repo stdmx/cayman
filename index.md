@@ -43,10 +43,35 @@ promise的学习笔记喵。
 
 ## QCQI
 
->这是QCQI的的学习笔记
+> 这是QCQI的学习笔记
 
+<ul>
+  {% for post in site.categories.QCQI %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
+  {% endfor %}
+</ul>
 
 ## 概率论与数理统计
 
+<ul>
+  {% for post in site.categories.概率论与数理统计 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
+  {% endfor %}
+</ul>
 
 ## 数学建模
+
+<ul>
+  {% for post in site.categories.数学建模 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
+  {% endfor %}
+</ul>
