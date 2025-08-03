@@ -18,7 +18,7 @@ promise的学习笔记喵。
 <ul>
   {% for post in site.posts limit: 5 %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <small>{{ post.date | date: "%Y-%m-%d" }}</small>
     </li>
   {% endfor %}
@@ -32,13 +32,12 @@ promise的学习笔记喵。
   <ul>
     {% for post in category[1] %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <small>{{ post.date | date: "%Y-%m-%d" }}</small>
       </li>
     {% endfor %}
   </ul>
 {% endfor %}
-
 
 
 

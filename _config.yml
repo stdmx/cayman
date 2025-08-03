@@ -33,3 +33,6 @@ permalink: /:year/:month/:day/:title/
 # 分页
 paginate: 5
 paginate_path: "/page/:num/"
+
+baseurl: "/learning_blog"  # 仓库名称
+url: "https://你的GitHub用户名.github.io"  # GitHub Pages URL
