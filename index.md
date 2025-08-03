@@ -6,6 +6,12 @@ title: promise的小站喵~
 # promise
 
 promise的学习笔记喵。
+<div style="text-align: center;">
+  <img src="{{ '/image/avatar.png' | relative_url }}" alt="我的头像" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+</div>
+
+
+杭电网安，主要学习方向是量子计算。
 
 ## 最新笔记
 
@@ -33,13 +39,8 @@ promise的学习笔记喵。
   </ul>
 {% endfor %}
 
-## 关于我
 
-<div style="text-align: center;">
-  <img src="{{ '/image/avatar.png' | relative_url }}" alt="我的头像" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-</div>
 
-杭电网安喵，主要学习方向是量子计算。
 
 ## QCQI
 
