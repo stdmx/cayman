@@ -202,8 +202,8 @@ $$
 
 \frac{1}{2^{k-1}} \leq \varepsilon \\
 \Rightarrow 2^{k-1} \geq \frac{1}{\varepsilon} \\
-\Rightarrow k - 1 \geq \log_2 \left(\frac{1}{\varepsilon}\right) \\
-\Rightarrow k \geq \log_2 \left(\frac{1}{\varepsilon}\right) + 1
+\Rightarrow k - 1 \geq \log_2 (\frac{1}{\varepsilon}) \\
+\Rightarrow k \geq \log_2 (\frac{1}{\varepsilon}) + 1
 
 $$
 
