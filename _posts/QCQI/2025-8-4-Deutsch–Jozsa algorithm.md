@@ -28,12 +28,9 @@ categories: 量子电路
 
 
 ### 第一步
-第一步先制备叠加态，
-$H^{\otimes n}$表示对于前n个量子比特都执行H门操作
+第一步先制备叠加态，$H^{\otimes n}$表示对于前n个量子比特都执行H门操作
 
-此时 
-
-$|1\rangle$ 就变成 $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$ 
+此时$\|1\rangle$ 就变成 $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$ 
 
 那么
 $|0\rangle^{\otimes n}$ 就会变成 $\left(\frac{|0\rangle + |1\rangle}{\sqrt{2}}\right)^{\otimes n}$ 
@@ -62,16 +59,16 @@ $0\oplus 0=0,1\oplus 0=1$
 就反一下呗，0变1,1变0
 此时y相当于就是
 
-\[ \frac{-|0\rangle + |1\rangle}{\sqrt{2}} = -\frac{|0\rangle - |1\rangle}{\sqrt{2}} \]
+\[ \frac{-\|0\rangle + |1\rangle}{\sqrt{2}} = -\frac{|0\rangle - |1\rangle}{\sqrt{2}} \]
 
 提出来就相当于加了一个全局相位符号喵 -
 所以f（x）的作用效果可以表示成这样
 
-\[ (-1)^{f(x)} \frac{|0\rangle - |1\rangle}{\sqrt{2}} \]
+\[ (-1)^{f(x)} \frac{\|0\rangle - |1\rangle}{\sqrt{2}} \]
 
 在调整一下位置，就可以知道此时
 
-\[|\psi_2\rangle = \sum_{x \in \{0,1\}^n} \frac{(-1)^{f(x)}|x\rangle}{\sqrt{2^n}} \frac{|0\rangle - |1\rangle}{\sqrt{2}}\]
+\[\|\psi_2\rangle = \sum_{x \in \{0,1\}^n} \frac{(-1)^{f(x)}\|x\rangle}{\sqrt{2^n}} \frac{|0\rangle - |1\rangle}{\sqrt{2}}\]
 
 **核心难理解点**：我也还不理解，反正就是虽然是对于 y进行的操作，但是最终反应在 x上，y没有任何变化， 这也反应了量子计算的一个特征喵，要说原因的话就是量子纠缠吧（大概，等我补了量子力学的知识再说喵）
 ### 第三部操作
