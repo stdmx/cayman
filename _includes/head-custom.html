@@ -5,18 +5,25 @@
 
 <!-- 添加 MathJax 支持 LaTeX 公式 -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <script>
 MathJax = {
   tex: {
     inlineMath: [['$', '$'], ['\(', '\)']],
     displayMath: [['$$', '$$'], ['\[', '\]']],
     processEscapes: true,
-    processEnvironments: true,
-    packages: {'[+]': ['physics']}  // 添加 physics 包支持更多物理符号
+    packages: {'[+]': ['physics']}
   },
   svg: {
-    fontCache: 'global'
+    fontCache: 'global',
+    scale: 1.05  // 稍微放大公式以提高可读性
+  },
+  startup: {
+    ready: function() {
+      MathJax.startup.defaultReady();
+      // 初始化后检查物理包是否加载
+      console.log('MathJax 已加载，物理包状态:', MathJax._.packages.has('physics'));
+    }
   }
 };
 </script>
