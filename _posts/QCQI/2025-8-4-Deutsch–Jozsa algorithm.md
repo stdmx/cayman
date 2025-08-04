@@ -31,16 +31,18 @@ categories: 量子电路
 第一步先制备叠加态，
 $H^{\otimes n}$表示对于前n个量子比特都执行H门操作
 
-此时 $|1\rangle$ 就变成 $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$ 
+此时 
+
+$|1\rangle$ 就变成 $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$ 
 
 那么
 $|0\rangle^{\otimes n}$ 就会变成 $\left(\frac{|0\rangle + |1\rangle}{\sqrt{2}}\right)^{\otimes n}$ 
 
 此时对于前n个量子比特都会处于一个均匀叠加的状态（描述可能不严谨），就是有$2^n$个态，包含n个比特的所有组合可能，因此可以表示成
-$$\sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}}$$
+\[\sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}}\]
 
 所以此时的量子态可以表示为
-$$|\psi_1\rangle = \sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}} \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$
+\[|\psi_1\rangle = \sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}} \frac{|0\rangle - |1\rangle}{\sqrt{2}}\]
 
 ### 第二步操作
 
@@ -60,23 +62,23 @@ $0\oplus 0=0,1\oplus 0=1$
 就反一下呗，0变1,1变0
 此时y相当于就是
 
-$$ \frac{-|0\rangle + |1\rangle}{\sqrt{2}} = -\frac{|0\rangle - |1\rangle}{\sqrt{2}} $$
+\[ \frac{-|0\rangle + |1\rangle}{\sqrt{2}} = -\frac{|0\rangle - |1\rangle}{\sqrt{2}} \]
 
 提出来就相当于加了一个全局相位符号喵 -
 所以f（x）的作用效果可以表示成这样
 
-$$ (-1)^{f(x)} \frac{|0\rangle - |1\rangle}{\sqrt{2}} $$
+\[ (-1)^{f(x)} \frac{|0\rangle - |1\rangle}{\sqrt{2}} \]
 
 在调整一下位置，就可以知道此时
 
-$$|\psi_2\rangle = \sum_{x \in \{0,1\}^n} \frac{(-1)^{f(x)}|x\rangle}{\sqrt{2^n}} \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$
+\[|\psi_2\rangle = \sum_{x \in \{0,1\}^n} \frac{(-1)^{f(x)}|x\rangle}{\sqrt{2^n}} \frac{|0\rangle - |1\rangle}{\sqrt{2}}\]
 
 **核心难理解点**：我也还不理解，反正就是虽然是对于 y进行的操作，但是最终反应在 x上，y没有任何变化， 这也反应了量子计算的一个特征喵，要说原因的话就是量子纠缠吧（大概，等我补了量子力学的知识再说喵）
 ### 第三部操作
 
 
 接下来就是最难而且不太好理解的部分了关于x对于任意量子态的作用可以表示为
- $$ H|x\rangle = \sum_z (-1)^{xz} |z\rangle / \sqrt{2} $$
+ \[ H|x\rangle = \sum_z (-1)^{xz} |z\rangle / \sqrt{2} \]
 
 其中 $x=0$或$1$，$z=0$或$1$
 
@@ -87,28 +89,28 @@ $ \frac{|0\rangle + |1\rangle}{\sqrt{2}} $
  
 带入获得 
 
-z=0的时候
+z=0的时候就是 
 
-就是 $ |0\rangle $,
+$ |0\rangle $,
 
-z=1的时候
+z=1的时候就是 
 
-就是 $|1\rangle$
+$|1\rangle$
 结果正确喵
 
 x=1的情况，带进入也是对的，不反复描述了
 
 接下来让我们看看n个H门作用的结果表示
 
-$$H^{\otimes n} |x_1, \ldots, x_n\rangle =| Hx_1,Hx_2,...,Hx_n\rangle $$
+\[H^{\otimes n} |x_1, \ldots, x_n\rangle =| Hx_1,Hx_2,...,Hx_n\rangle \]
 
 都可以提取出来（物理原理保留理解，以后填充）
 
 得到结果，
-$$H^{\otimes n} |x_1, \ldots, x_n\rangle = \frac{\sum_{z_1, \ldots, z_n} (-1)^{x_1 z_1 + \cdots + x_n z_n} |z_1, \ldots, z_n\rangle}{\sqrt{2^n}}.$$
+\[H^{\otimes n} |x_1, \ldots, x_n\rangle = \frac{\sum_{z_1, \ldots, z_n} (-1)^{x_1 z_1 + \cdots + x_n z_n} |z_1, \ldots, z_n\rangle}{\sqrt{2^n}}.\]
 这个可以简化成
 
-$$H^{\otimes n} |x\rangle = \frac{\sum_{z}(-1)^{x \cdot z} |z\rangle}{\sqrt{2^n}}$$
+\[H^{\otimes n} |x\rangle = \frac{\sum_{z}(-1)^{x \cdot z} |z\rangle}{\sqrt{2^n}}\]
 
 即把x和z看成一个向量
 
@@ -117,7 +119,7 @@ ${x_1 z_1 + \cdots + x_n z_n}$ 这里就可以看出来
 
 此时
 
-$$|\psi_3\rangle = \sum_z \sum_x \frac{(-1)^{x \cdot z + f(x)} |z\rangle}{2^n} \frac{|0\rangle - |1\rangle}{\sqrt{2}}.$$
+\[|\psi_3\rangle = \sum_z \sum_x \frac{(-1)^{x \cdot z + f(x)} |z\rangle}{2^n} \frac{|0\rangle - |1\rangle}{\sqrt{2}}.\]
 
 ### 见证奇迹的时刻
 
@@ -125,7 +127,7 @@ $$|\psi_3\rangle = \sum_z \sum_x \frac{(-1)^{x \cdot z + f(x)} |z\rangle}{2^n} \
 
 
 如果 $f(x)$ 是常函数，则对于全零态 $|0\rangle^{\otimes n}$ 的情况的振幅为
-$$\sum_x (-1)^{f(x)} / 2^n.$$
+\[\sum_x (-1)^{f(x)} / 2^n.\]
 
 由于 $f(x)$  恒等于0或者1，所以全0态的振幅为1或者-1，
 是单位长度，所以其他态的振幅一定全为0!
@@ -187,9 +189,9 @@ ai生成， 我这部分基础知识比较薄弱
 
 要保证 ε < 1/2，必须：
 
-$$ \frac{1}{2^{k-1}} \leq \varepsilon \\
+\[ \frac{1}{2^{k-1}} \leq \varepsilon \\
 \Rightarrow 2^{k-1} \geq \frac{1}{\varepsilon} \\
 \Rightarrow k - 1 \geq \log_2 \left(\frac{1}{\varepsilon}\right) \\
-\Rightarrow k \geq \log_2 \left(\frac{1}{\varepsilon}\right) + 1 $$
+\Rightarrow k \geq \log_2 \left(\frac{1}{\varepsilon}\right) + 1 \]
 
 因此，任何算法至少需要 k = Ω(log(1/ε)) 次查询。
