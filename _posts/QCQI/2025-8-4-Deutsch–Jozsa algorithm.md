@@ -30,7 +30,7 @@ categories: 量子电路
 ### 第一步
 第一步先制备叠加态，$H^{\otimes n}$表示对于前n个量子比特都执行H门操作
 
-此时$\|1\rangle$ 就变成 $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$ 
+此时 \(\|1\rangle\) 就变成 \(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\)
 
 那么
 $|0\rangle^{\otimes n}$ 就会变成 $\left(\frac{|0\rangle + |1\rangle}{\sqrt{2}}\right)^{\otimes n}$ 
