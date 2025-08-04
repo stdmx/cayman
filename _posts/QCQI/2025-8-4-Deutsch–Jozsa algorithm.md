@@ -1,3 +1,11 @@
+---
+layout: default
+title: DJ算法
+date: 2025-8-4
+categories: 量子电路
+---
+
+
 ## 算法核心目标
 判断函数为平衡函数还是常函数
 对于函数 $f ；\{0,1\}^n-> \{0,1\}$
@@ -16,22 +24,24 @@
 
 
 实现通用Deutsch-Jozsa算法的量子电路图如下喵
-![量子电路图](../../image/QCQI_image/Pasted%20image%2020250804143815.png)
+![量子电路图](/image/QCQI_image/Pasted%20image%2020250804143815.png)
 
 
 ### 第一步
 第一步先制备叠加态，
 $H^{\otimes n}$表示对于前n个量子比特都执行H门操作
 
-此时$|1\rangle$ 就变成 $ \frac{|0\rangle - |1\rangle}{\sqrt{2}} $
+此时 $|1\rangle$ 就变成 $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$
 
-$|0\rangle^{\otimes n}$ 就会变成$ \frac{|0\rangle + |1\rangle}{\sqrt{2}} ^{\otimes n}$ 
+那么
+$|0\rangle^{\otimes n}$ 就会变成 $\frac{|0\rangle + |1\rangle}{\sqrt{2}} ^{\otimes n}$ 
 
 此时对于前n个量子比特都会处于一个均匀叠加的状态（描述可能不严谨），就是有$2^n$个态，包含n个比特的所有组合可能，因此可以表示成
-$\sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}}$
+$$\sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}}$$
 
 所以此时的量子态可以表示为
-$$|\psi_1\rangle = \sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}}  \frac{|0\rangle - |1\rangle}{\sqrt{2}} 
+$$ 
+|\psi_1\rangle = \sum_{x \in \{0,1\}^n} \frac{|x\rangle}{\sqrt{2^n}}  \frac{|0\rangle - |1\rangle}{\sqrt{2}} 
 $$
 
 ### 第二步操作
@@ -42,9 +52,9 @@ x就是前n个量子比特
 y就是初始的态
 $|1\rangle$
 
-由于$f(x)只可能等于0或者1$
+由于 $f(x)只可能等于0或者1$
 
-当$f(x)=0时$对于y的效果为
+当 $f(x)=0时$ 对于y的效果为
 $0\oplus 0=0,1\oplus 0=1$
 你猜怎么着，没效果
 
@@ -53,12 +63,14 @@ $0\oplus 0=0,1\oplus 0=1$
 此时y相当于就是
 
 $$ \frac{-|0\rangle + |1\rangle}{\sqrt{2}} = -\frac{|0\rangle - |1\rangle}{\sqrt{2}} $$
+
 提出来就相当于加了一个全局相位符号喵 -
 所以f（x）的作用效果可以表示成这样
 
-$$(-1)^{f(x)} \frac{|0\rangle - |1\rangle}{\sqrt{2}} $$
+$$ (-1)^{f(x)} \frac{|0\rangle - |1\rangle}{\sqrt{2}} $$
 
 在调整一下位置，就可以知道此时
+
 $$
 |\psi_2\rangle = \sum_{x \in \{0,1\}^n} \frac{(-1)^{f(x)}|x\rangle}{\sqrt{2^n}}  \frac{|0\rangle - |1\rangle}{\sqrt{2}} 
 $$
@@ -81,7 +93,7 @@ $ \frac{|0\rangle + |1\rangle}{\sqrt{2}} $
 
 z=0的时候
 
-就是 $|0\rangle$,
+就是 $ |0\rangle $,
 
 z=1的时候
 

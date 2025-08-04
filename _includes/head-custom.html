@@ -12,15 +12,13 @@ MathJax = {
     inlineMath: [['$', '$'], ['\(', '\)']],
     displayMath: [['$$', '$$'], ['\[', '\]']],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true,
+    packages: {'[+]': ['physics']}  // 添加 physics 包支持更多物理符号
   },
   svg: {
     fontCache: 'global'
   }
 };
 </script>
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" -->
 
 <!-- end custom head snippets -->
