@@ -59,16 +59,16 @@ $0\oplus 0=0,1\oplus 0=1$
 就反一下呗，0变1,1变0
 此时y相当于就是
 
-\[ \frac{-\|0\rangle + |1\rangle}{\sqrt{2}} = -\frac{|0\rangle - |1\rangle}{\sqrt{2}} \]
+\[ \frac{-\|0\rangle + \|1\rangle}{\sqrt{2}} = -\frac{\|0\rangle - \|1\rangle}{\sqrt{2}} \]
 
 提出来就相当于加了一个全局相位符号喵 -
 所以f（x）的作用效果可以表示成这样
 
-\[ (-1)^{f(x)} \frac{\|0\rangle - |1\rangle}{\sqrt{2}} \]
+\[ (-1)^{f(x)} \frac{\|0\rangle - \|1\rangle}{\sqrt{2}} \]
 
 在调整一下位置，就可以知道此时
 
-\[\|\psi_2\rangle = \sum_{x \in \{0,1\}^n} \frac{(-1)^{f(x)}\|x\rangle}{\sqrt{2^n}} \frac{|0\rangle - |1\rangle}{\sqrt{2}}\]
+\[\|\psi_2\rangle = \sum_{x \in \{0,1\}^n} \frac{(-1)^{f(x)}\|x\rangle}{\sqrt{2^n}} \frac{\|0\rangle - \|1\rangle}{\sqrt{2}}\]
 
 **核心难理解点**：我也还不理解，反正就是虽然是对于 y进行的操作，但是最终反应在 x上，y没有任何变化， 这也反应了量子计算的一个特征喵，要说原因的话就是量子纠缠吧（大概，等我补了量子力学的知识再说喵）
 ### 第三部操作
@@ -88,26 +88,26 @@ $ \frac{|0\rangle + |1\rangle}{\sqrt{2}} $
 
 z=0的时候就是 
 
-$ |0\rangle $,
+$ \|0\rangle $,
 
 z=1的时候就是 
 
-$|1\rangle$
+$\|1\rangle$
 结果正确喵
 
 x=1的情况，带进入也是对的，不反复描述了
 
 接下来让我们看看n个H门作用的结果表示
 
-\[H^{\otimes n} |x_1, \ldots, x_n\rangle =| Hx_1,Hx_2,...,Hx_n\rangle \]
+\[H^{\otimes n} \|x_1, \ldots, x_n\rangle =\| Hx_1,Hx_2,...,Hx_n\rangle \]
 
 都可以提取出来（物理原理保留理解，以后填充）
 
 得到结果，
-\[H^{\otimes n} |x_1, \ldots, x_n\rangle = \frac{\sum_{z_1, \ldots, z_n} (-1)^{x_1 z_1 + \cdots + x_n z_n} |z_1, \ldots, z_n\rangle}{\sqrt{2^n}}.\]
+\[H^{\otimes n} \|x_1, \ldots, x_n\rangle = \frac{\sum_{z_1, \ldots, z_n} (-1)^{x_1 z_1 + \cdots + x_n z_n} \|z_1, \ldots, z_n\rangle}{\sqrt{2^n}}.\]
 这个可以简化成
 
-\[H^{\otimes n} |x\rangle = \frac{\sum_{z}(-1)^{x \cdot z} |z\rangle}{\sqrt{2^n}}\]
+\[H^{\otimes n} \|x\rangle = \frac{\sum_{z}(-1)^{x \cdot z} \|z\rangle}{\sqrt{2^n}}\]
 
 即把x和z看成一个向量
 
@@ -116,7 +116,7 @@ ${x_1 z_1 + \cdots + x_n z_n}$ 这里就可以看出来
 
 此时
 
-\[|\psi_3\rangle = \sum_z \sum_x \frac{(-1)^{x \cdot z + f(x)} |z\rangle}{2^n} \frac{|0\rangle - |1\rangle}{\sqrt{2}}.\]
+\[\|\psi_3\rangle = \sum_z \sum_x \frac{(-1)^{x \cdot z + f(x)} \|z\rangle}{2^n} \frac{\|0\rangle - \|1\rangle}{\sqrt{2}}.\]
 
 ### 见证奇迹的时刻
 
@@ -146,7 +146,7 @@ ${x_1 z_1 + \cdots + x_n z_n}$ 这里就可以看出来
 
 
 ## 习题
-**Exercise 1.1: (Probabilistic  classical  algorithm)** Suppose that the problem is not
+**Exercise 1.1: Probabilistic  classical  algorithm** Suppose that the problem is not
 to distinguish between the constant and balanced functions *with certainty*, but
 rather, with some probability of error *ε < 1/2*. What is the performance of the
 best classical algorithm for this problem?
