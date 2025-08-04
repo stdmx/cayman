@@ -24,7 +24,7 @@ categories: 量子电路
 
 
 实现通用Deutsch-Jozsa算法的量子电路图如下喵
- ![量子电路图](/image/QCQI_image/Pasted%20image%2020250804143815.png)
+![量子电路图]({{ site.baseurl }}/image/QCQI_image/Pasted%20image%2020250804143815.png)
 
 
 ### 第一步
